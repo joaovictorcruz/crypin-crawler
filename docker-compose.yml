@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: crypin-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: CrypinDb
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_USER: crypin
+      MYSQL_PASSWORD: crypin123
+      TZ: America/Sao_Paulo
+    ports:
+      - "3306:3306"
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
