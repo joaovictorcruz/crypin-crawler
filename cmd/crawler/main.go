@@ -1,7 +1,7 @@
 package main
 
-import "github.com/joaovictorcruz/crypin-crawler/internal/crawlers"
+import "github.com/joaovictorcruz/crypin-crawler/internal/crawlers/services"
 
 func main() {
-	crawlers.RunCoinMarketCapCrawler()
+	services.RunCoinMarketCapCrawler()
 }
